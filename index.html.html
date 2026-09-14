@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Nicholas G. Hall — Berry Family Professor of Operations Management</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Spectral:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+:root{
+  --scarlet:#BB0000;
+  --scarlet-dark:#8f0000;
+  --scarlet-soft:#fbeaea;
+  --ink:#1d1d21;
+  --body:#3f3f46;
+  --muted:#6b6b73;
+  --line:#e6e6e3;
+  --bg:#ffffff;
+  --bg-soft:#faf9f7;
+  --serif:'Spectral',Georgia,serif;
+  --sans:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
+  --wrap:1120px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:76px}
+body{margin:0;font-family:var(--sans);font-size:17px;line-height:1.65;color:var(--body);background:var(--bg);-webkit-font-smoothing:antialiased}
+h1,h2,h3,h4{font-family:var(--serif);font-weight:600;line-height:1.2;color:var(--ink);margin:0 0 .5em}
+a{color:var(--scarlet);text-decoration:none}
+a:hover{text-decoration:underline}
+p{margin:0 0 1.1em}
+.wrap{max-width:var(--wrap);margin:0 auto;padding:0 28px}
+
+/* ---------- nav ---------- */
+header.site{position:sticky;top:0;z-index:60;background:rgba(255,255,255,.92);backdrop-filter:saturate(180%) blur(12px);border-bottom:1px solid var(--line)}
+.nav{display:flex;align-items:center;justify-content:space-between;gap:20px;height:66px}
+.brand{font-family:var(--serif);font-size:1.18rem;font-weight:600;color:var(--ink)}
+.brand:hover{text-decoration:none;color:var(--scarlet)}
+.nav ul{display:flex;list-style:none;gap:26px;margin:0;padding:0}
+.nav ul a{font-size:.83rem;letter-spacing:.09em;text-transform:uppercase;font-weight:500;color:var(--body);padding-bottom:4px;border-bottom:2px solid transparent}
+.nav ul a:hover,.nav ul a.active{color:var(--ink);border-bottom-color:var(--scarlet);text-decoration:none}
+.navtoggle{display:none;background:none;border:1px solid var(--line);border-radius:6px;padding:7px 10px;font-size:1rem;cursor:pointer;color:var(--ink)}
+
+/* ---------- hero ---------- */
+.hero{position:relative;background:var(--ink);color:#f4f4f2;overflow:hidden;padding:78px 0 70px}
+.hero:before{content:"";position:absolute;inset:0;background:
+  radial-gradient(760px 420px at 82% 18%,rgba(187,0,0,.34),transparent 62%),
+  radial-gradient(600px 380px at 8% 92%,rgba(187,0,0,.16),transparent 60%)}
+.hero .wrap{position:relative;display:grid;grid-template-columns:1fr 290px;gap:60px;align-items:center}
+.eyebrow{font-size:.78rem;letter-spacing:.16em;text-transform:uppercase;color:#f0a3a3;font-weight:600;margin-bottom:16px}
+.hero h1{font-size:3.35rem;color:#fff;margin-bottom:.25em;letter-spacing:-.5px}
+.hero .role{font-size:1.22rem;color:#e8e6e2;font-family:var(--serif);margin-bottom:.35em}
+.hero .affil{font-size:.98rem;color:#b9b7b3;margin-bottom:1.4em}
+.hero .meta{font-size:.92rem;color:#cfcdc8;border-top:1px solid rgba(255,255,255,.16);padding-top:16px;margin-bottom:26px}
+.hero .meta a{color:#f0a3a3}
+.btns{display:flex;flex-wrap:wrap;gap:12px}
+.btn{display:inline-block;font-size:.85rem;letter-spacing:.06em;text-transform:uppercase;font-weight:600;padding:11px 20px;border-radius:6px;border:1px solid transparent}
+.btn:hover{text-decoration:none}
+.btn-primary{background:var(--scarlet);color:#fff}
+.btn-primary:hover{background:var(--scarlet-dark);color:#fff}
+.btn-secondary{border-color:rgba(255,255,255,.34);color:#f4f4f2}
+.btn-secondary:hover{background:rgba(255,255,255,.1);color:#fff}
+.photo{width:290px;height:290px;border-radius:50%;overflow:hidden;border:4px solid rgba(255,255,255,.14);box-shadow:0 18px 46px rgba(0,0,0,.42);background:linear-gradient(150deg,#2c2c31,#1a1a1e);display:flex;align-items:center;justify-content:center}
+.photo img{width:100%;height:100%;object-fit:cover;display:block}
+.photo .initials{font-family:var(--serif);font-size:4.4rem;color:#f0a3a3;letter-spacing:2px}
+
+/* ---------- stats ---------- */
+.stats{background:var(--bg-soft);border-bottom:1px solid var(--line)}
+.stats .wrap{display:flex;justify-content:space-between;gap:20px;padding-top:30px;padding-bottom:30px;flex-wrap:wrap}
+.stat{flex:1 1 0;min-width:130px;text-align:center}
+.stat .n{font-family:var(--serif);font-size:2.3rem;font-weight:600;color:var(--scarlet);line-height:1.1}
+.stat .l{font-size:.76rem;letter-spacing:.11em;text-transform:uppercase;color:var(--muted);font-weight:500;margin-top:4px}
+
+/* ---------- sections ---------- */
+section.block{padding:66px 0;border-bottom:1px solid var(--line)}
+section.block.alt{background:var(--bg-soft)}
+.sec-title{font-size:.79rem;letter-spacing:.17em;text-transform:uppercase;color:var(--scarlet);font-weight:700;font-family:var(--sans);margin-bottom:10px}
+.block h2{font-size:2.05rem;margin-bottom:.7em}
+.lead{font-size:1.06rem}
+
+.grid2{display:grid;grid-template-columns:repeat(2,1fr);gap:22px}
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.card{background:#fff;border:1px solid var(--line);border-radius:10px;padding:26px;box-shadow:0 1px 3px rgba(0,0,0,.04)}
+.card h3{font-size:1.16rem;margin-bottom:.45em}
+.card p:last-child{margin-bottom:0}
+.card .tag{display:inline-block;font-size:.7rem;letter-spacing:.12em;text-transform:uppercase;font-weight:700;color:var(--scarlet);background:var(--scarlet-soft);border-radius:99px;padding:4px 11px;margin-bottom:12px}
+
+/* ---------- timeline ---------- */
+.timeline{border-left:2px solid var(--line);margin-left:9px;padding-left:28px}
+.tl-item{position:relative;padding-bottom:26px}
+.tl-item:last-child{padding-bottom:0}
+.tl-item:before{content:"";position:absolute;left:-37px;top:6px;width:12px;height:12px;border-radius:50%;background:var(--scarlet);border:3px solid #fff;box-shadow:0 0 0 2px var(--scarlet)}
+.alt .tl-item:before{border-color:var(--bg-soft)}
+.tl-year{font-size:.76rem;letter-spacing:.11em;text-transform:uppercase;color:var(--muted);font-weight:600}
+.tl-title{font-family:var(--serif);font-size:1.08rem;color:var(--ink);font-weight:600;margin:2px 0}
+.tl-sub{font-size:.94rem;color:var(--muted)}
+
+/* ---------- lists ---------- */
+ul.clean{list-style:none;margin:0;padding:0}
+ul.clean li{padding:9px 0;border-bottom:1px dashed var(--line);font-size:.97rem}
+ul.clean li:last-child{border-bottom:none}
+ul.clean li strong{color:var(--ink)}
+.pub{display:flex;gap:16px;padding:15px 0;border-bottom:1px solid var(--line)}
+.pub:last-child{border-bottom:none}
+.pub .badge{flex:0 0 34px;height:34px;border-radius:8px;background:var(--scarlet-soft);color:var(--scarlet);font-weight:700;font-size:.85rem;display:flex;align-items:center;justify-content:center;font-family:var(--serif)}
+.pub .body{flex:1}
+.pub .body .t{color:var(--ink);font-weight:600}
+.pub .body .m{font-size:.9rem;color:var(--muted)}
+.book{display:flex;gap:22px;align-items:center;background:linear-gradient(120deg,#1d1d21,#33161a);color:#f2f0ee;border-radius:12px;padding:26px 28px;margin-bottom:30px}
+.book .spine{flex:0 0 62px;height:88px;border-radius:4px;background:linear-gradient(160deg,var(--scarlet),#6d0000);box-shadow:0 8px 22px rgba(0,0,0,.4)}
+.book h3{color:#fff;margin-bottom:.2em}
+.book p{margin:0;color:#c9c6c2;font-size:.95rem}
+
+.news .item{display:flex;gap:18px;padding:16px 0;border-bottom:1px solid var(--line)}
+.news .item:last-child{border-bottom:none}
+.news .yr{flex:0 0 62px;font-family:var(--serif);font-weight:600;color:var(--scarlet)}
+
+/* ---------- footer ---------- */
+footer.site{background:var(--ink);color:#b9b7b3;padding:52px 0 34px}
+footer.site .wrap{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:34px}
+footer.site h4{color:#fff;font-size:1.05rem;margin-bottom:.6em}
+footer.site a{color:#f0a3a3}
+footer.site ul{list-style:none;margin:0;padding:0}
+footer.site li{padding:5px 0;font-size:.93rem}
+.copy{border-top:1px solid rgba(255,255,255,.14);margin-top:34px;padding-top:18px;font-size:.83rem;color:#82807c;text-align:center}
+
+@media(max-width:980px){
+  .hero .wrap{grid-template-columns:1fr;justify-items:center;text-align:center;gap:34px}
+  .hero h1{font-size:2.5rem}
+  .btns{justify-content:center}
+  .grid3{grid-template-columns:1fr 1fr}
+  footer.site .wrap{grid-template-columns:1fr 1fr}
+}
+@media(max-width:860px){
+  .stats .wrap{gap:24px}
+  .stat{flex:1 1 40%}
+}
+@media(max-width:720px){
+  .navtoggle{display:block}
+  .nav ul{display:none;position:absolute;top:66px;left:0;right:0;background:#fff;border-bottom:1px solid var(--line);flex-direction:column;gap:0;padding:10px 28px 18px}
+  .nav ul.open{display:flex}
+  .nav ul li a{display:block;padding:10px 0;border-bottom:none}
+  .grid2,.grid3{grid-template-columns:1fr}
+  footer.site .wrap{grid-template-columns:1fr}
+  .hero h1{font-size:2.1rem}
+  .photo{width:220px;height:220px}
+}
+</style>
+</head>
+<body>
+
+<header class="site">
+  <div class="wrap nav">
+    <a class="brand" href="#top">Nicholas G. Hall</a>
+    <button class="navtoggle" id="navtoggle" aria-label="Menu">☰</button>
+    <ul id="navmenu">
+      <li><a href="#top" class="active">Home</a></li>
+      <li><a href="#research">Research</a></li>
+      <li><a href="#publications">Publications</a></li>
+      <li><a href="#teaching">Teaching</a></li>
+      <li><a href="#service">Service</a></li>
+      <li><a href="#awards">Awards</a></li>
+      <li><a href="#cv">CV</a></li>
+    </ul>
+  </div>
+</header>
+
+<div class="hero" id="top">
+  <div class="wrap">
+    <div>
+      <div class="eyebrow">Fisher College of Business · The Ohio State University</div>
+      <h1>Nicholas G. Hall</h1>
+      <div class="role">Berry Family Professor of Operations Management</div>
+      <div class="affil">Department of Operations and Business Analytics · Courtesy Professor, Department of Integrated Systems Engineering</div>
+      <div class="meta">Fellow of INFORMS (2021) · President of INFORMS (2018) · <a href="mailto:hall.33@osu.edu">hall.33@osu.edu</a></div>
+      <div class="btns">
+        <a class="btn btn-primary" href="#research">View Research</a>
+        <a class="btn btn-secondary" href="https://scholar.google.com/citations?user=MmXKztQAAAAJ&hl=en&oi=ao" target="_blank" rel="noopener">Google Scholar</a>
+        <a class="btn btn-secondary" href="https://u.osu.edu/hall33/curriculum-vitae/" target="_blank" rel="noopener">Curriculum Vitae</a>
+        <a class="btn btn-secondary" href="mailto:hall.33@osu.edu">Email</a>
+      </div>
+    </div>
+    <div class="photo">
+      <span class="initials">NH</span>
+      <img src="https://u.osu.edu/hall33/files/2023/05/DSCN0165-225x300.jpg" alt="Nicholas G. Hall"
+           onload="this.previousElementSibling.style.display='none'"
+           onerror="this.style.display='none'">
+    </div>
+  </div>
+</div>
+
+<div class="stats">
+  <div class="wrap">
+    <div class="stat"><div class="n">104</div><div class="l">Refereed Publications</div></div>
+    <div class="stat"><div class="n">8,300+</div><div class="l">Citations</div></div>
+    <div class="stat"><div class="n">41</div><div class="l">h-index</div></div>
+    <div class="stat"><div class="n">460</div><div class="l">Presentations</div></div>
+    <div class="stat"><div class="n">30</div><div class="l">Countries</div></div>
+  </div>
+</div>
+
+<!-- ABOUT -->
+<section class="block" id="about">
+  <div class="wrap">
+    <div class="sec-title">About</div>
+    <h2>Welcome to my faculty homepage</h2>
+    <div class="grid2">
+      <div>
+        <p class="lead">Nicholas G. Hall is Berry Family Professor of Operations Management in the Department of Operations and Business Analytics at Fisher College of Business, The Ohio State University, with a courtesy professorship in the Department of Integrated Systems Engineering.</p>
+        <p>His research addresses scheduling, project management, behavioral issues in operations, tournament design for sports, and applications of operations research. He has published 104 refereed papers in leading journals, including <em>Operations Research</em>, <em>Management Science</em>, <em>Mathematics of Operations Research</em>, <em>Manufacturing &amp; Service Operations Management</em>, and <em>INFORMS Journal on Computing</em>. A 2021 bibliometric study ranked him first among all researchers for publications in scheduling.</p>
+      </div>
+      <div>
+        <p>He is co-author, with Z.-L. Chen, of <em>Supply Chain Scheduling</em> (Springer, 2022, 706 pages). His Google Scholar citations exceed 8,300, with an h-index of 41. He has given 460 presentations in 30 countries, including 220 invited talks, 20 keynote addresses, and 10 INFORMS tutorials.</p>
+        <p>He teaches graduate M.B.A. courses in project management and sports analytics, as well as executive education short courses. His award-winning project management course has been adopted by 25 universities in 9 countries. He served as President of INFORMS in 2018, where he established the society's government advocacy program, and was elected a Fellow of INFORMS in 2021 — a distinction limited to 2% of the membership.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- RESEARCH -->
+<section class="block alt" id="research">
+  <div class="wrap">
+    <div class="sec-title">Research</div>
+    <h2>Four principal research areas</h2>
+    <div class="grid2">
+      <div class="card">
+        <span class="tag">Project Management</span>
+        <h3>Optimization for planning and execution</h3>
+        <p>Application of modern optimization and robust optimization methods to address the main planning and execution decisions within project frameworks.</p>
+      </div>
+      <div class="card">
+        <span class="tag">Supply Chain Scheduling</span>
+        <h3>Coordination across decision makers</h3>
+        <p>Coordination of scheduling decisions across multiple functions and among self-interested decision makers, to improve overall supply chain performance.</p>
+      </div>
+      <div class="card">
+        <span class="tag">Behavioral Operations</span>
+        <h3>Present bias and incentive design</h3>
+        <p>The effect of present bias on operational decision making, and the design of incentives to mitigate its effects on operational performance.</p>
+      </div>
+      <div class="card">
+        <span class="tag">Sports Analytics</span>
+        <h3>Tournament design</h3>
+        <p>Design of tournaments to improve competitive outcomes and to reduce anti-competitive behavior such as shirking and strategic opponent choice.</p>
+      </div>
+    </div>
+
+    <div style="height:34px"></div>
+    <div class="grid3">
+      <div class="card">
+        <h3>Bibliometric standing</h3>
+        <p>Ranked 1st for publications in the research field of scheduling in <em>Operations Research</em> over the period 1952–2019, with 8 of the 128 articles in the h-index of <em>Operations Research</em>.</p>
+      </div>
+      <div class="card">
+        <h3>International engagement</h3>
+        <p>Visiting professorships at universities in Australia, China, Hong Kong, Japan, Singapore, and the United Kingdom; 460 presentations delivered across 30 countries.</p>
+      </div>
+      <div class="card">
+        <h3>Applied research</h3>
+        <p>Consulting and applied projects spanning healthcare optimization at the National Cancer Institute, financial systems at BancOne, and manufacturing process improvement for O.M. Scott &amp; Sons.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PUBLICATIONS -->
+<section class="block" id="publications">
+  <div class="wrap">
+    <div class="sec-title">Publications</div>
+    <h2>Book and 104 refereed articles</h2>
+
+    <div class="book">
+      <div class="spine"></div>
+      <div>
+        <h3>Supply Chain Scheduling</h3>
+        <p>Z.-L. Chen and N. G. Hall · Springer, February 2022 · 706 pages</p>
+      </div>
+    </div>
+
+    <p class="lead">Refereed publications are organized into nine research topics, spanning 1986 to 2026.</p>
+
+    <div class="pub"><div class="badge">9</div><div class="body"><div class="t">Topic 1 · Supply Chain Scheduling</div><div class="m">2007–2016 — capacity allocation and auction protocols (Hall &amp; Liu); coordination of pricing and scheduling decisions (Chen &amp; Hall).</div></div></div>
+    <div class="pub"><div class="badge">14</div><div class="body"><div class="t">Topic 2 · Project Management</div><div class="m">2013–2026 — “Optimal intraproject learning” (Cao et al., 2024); “Work more tomorrow: resolving present bias” (Shi, Hall &amp; Cui, 2023).</div></div></div>
+    <div class="pub"><div class="badge">3</div><div class="body"><div class="t">Topic 3 · Empirical Science</div><div class="m">2001–2010 — performance prediction and experimental data generation.</div></div></div>
+    <div class="pub"><div class="badge">14</div><div class="body"><div class="t">Topic 4 · Operations Research and Applications</div><div class="m">1987–2026 — “Vehicle platooning” (Chen &amp; Hall, 2026); “Opponent choice in sports: winning and shirking” (Hall &amp; Liu, 2025).</div></div></div>
+    <div class="pub"><div class="badge">3</div><div class="body"><div class="t">Topic 5 · Rescheduling</div><div class="m">2004–2010.</div></div></div>
+    <div class="pub"><div class="badge">3</div><div class="body"><div class="t">Topic 6 · Scheduling with Finite Capacity Buffers</div><div class="m">1997–1998.</div></div></div>
+    <div class="pub"><div class="badge">9</div><div class="body"><div class="t">Topic 7 · Scheduling with Servers</div><div class="m">1997–2001.</div></div></div>
+    <div class="pub"><div class="badge">4</div><div class="body"><div class="t">Topic 8 · Completion Time Variance</div><div class="m">1986–1991.</div></div></div>
+    <div class="pub"><div class="badge">19</div><div class="body"><div class="t">Topic 9 · Extensions of Classical Scheduling</div><div class="m">1986–2025.</div></div></div>
+
+    <p style="margin-top:22px"><a href="https://u.osu.edu/hall33/research/publications/" target="_blank" rel="noopener">Full publication list →</a></p>
+  </div>
+</section>
+
+<!-- EDUCATION & APPOINTMENTS -->
+<section class="block alt" id="education">
+  <div class="wrap">
+    <div class="sec-title">Education &amp; Career</div>
+    <h2>Degrees and appointments</h2>
+    <div class="grid2">
+      <div>
+        <h3 style="font-size:1.2rem;margin-bottom:18px">Education</h3>
+        <div class="timeline">
+          <div class="tl-item"><div class="tl-year">1986</div><div class="tl-title">Ph.D., Management Science</div><div class="tl-sub">University of California, Berkeley · Advisor: Prof. Dorit S. Hochbaum</div></div>
+          <div class="tl-item"><div class="tl-year">1979</div><div class="tl-title">M.A., Economics</div><div class="tl-sub">University of Cambridge</div></div>
+          <div class="tl-item"><div class="tl-year">1978</div><div class="tl-title">A.C.A.</div><div class="tl-sub">Associate Member, Institute of Chartered Accountants in England and Wales</div></div>
+          <div class="tl-item"><div class="tl-year">1975</div><div class="tl-title">B.A., Economics</div><div class="tl-sub">University of Cambridge</div></div>
+        </div>
+      </div>
+      <div>
+        <h3 style="font-size:1.2rem;margin-bottom:18px">Academic Appointments</h3>
+        <div class="timeline">
+          <div class="tl-item"><div class="tl-year">2018 – Present</div><div class="tl-title">Berry Family Professor</div><div class="tl-sub">Fisher College of Business, The Ohio State University</div></div>
+          <div class="tl-item"><div class="tl-year">2016 – 2018</div><div class="tl-title">Fisher College of Business Distinguished Professor</div><div class="tl-sub">The Ohio State University</div></div>
+          <div class="tl-item"><div class="tl-year">1996 – 2016</div><div class="tl-title">Professor</div><div class="tl-sub">Department of Management Sciences, The Ohio State University</div></div>
+          <div class="tl-item"><div class="tl-year">1989 – 1996</div><div class="tl-title">Associate Professor</div><div class="tl-sub">Department of Management Sciences, The Ohio State University</div></div>
+          <div class="tl-item"><div class="tl-year">1983 – 1989</div><div class="tl-title">Assistant Professor</div><div class="tl-sub">Department of Management Sciences, The Ohio State University</div></div>
+          <div class="tl-item"><div class="tl-year">1979 – 1983</div><div class="tl-title">Teaching and Research Assistant</div><div class="tl-sub">Graduate School of Business Administration, University of California, Berkeley</div></div>
+          <div class="tl-item"><div class="tl-year">1975 – 1979</div><div class="tl-title">Associate Accountant</div><div class="tl-sub">Coopers &amp; Lybrand, London</div></div>
+        </div>
+      </div>
+    </div>
+
+    <div style="height:34px"></div>
+    <h3 style="font-size:1.2rem">Visiting Positions</h3>
+    <ul class="clean">
+      <li><strong>Jan – Apr 2011</strong> · Visiting Professor, Krannert School of Management, Purdue University</li>
+      <li><strong>Aug 1999 – May 2000</strong> · Visiting Professor, University of Pennsylvania</li>
+      <li><strong>Mar – Jun 1993</strong> · Visiting Associate Professor of Managerial Economics and Decision Sciences, Kellogg Graduate School of Management, Northwestern University</li>
+      <li><strong>Aug 1990 – May 1991</strong> · Visiting Associate Professor, The Wharton School, University of Pennsylvania</li>
+    </ul>
+  </div>
+</section>
+
+<!-- TEACHING -->
+<section class="block" id="teaching">
+  <div class="wrap">
+    <div class="sec-title">Teaching</div>
+    <h2>Prescriptive analytics, taught by discussion</h2>
+    <p class="lead">Professor Hall's teaching emphasizes prescriptive analytics — helping students determine the best course of action. Courses are discussion-based rather than lecture-based, developing decision-making skill. His award-winning project management course has been adopted by 25 universities in 9 countries.</p>
+
+    <div class="grid2">
+      <div class="card">
+        <span class="tag">Executive Education</span>
+        <ul class="clean">
+          <li>Project management (100% active learning, 2 days)</li>
+          <li>Introduction to project management (1–5 days)</li>
+          <li>Project risk management (1 day)</li>
+          <li>Introduction to sports analytics (1–5 days)</li>
+        </ul>
+      </div>
+      <div class="card">
+        <span class="tag">Ph.D. Seminars · 21 hours each</span>
+        <ul class="clean">
+          <li>Research topics in project management</li>
+          <li>Current research in operations management and optimization</li>
+          <li>Production scheduling and applications</li>
+          <li>Dynamic programming applications to supply chain management</li>
+          <li>Academic career skills</li>
+        </ul>
+      </div>
+      <div class="card">
+        <span class="tag">M.B.A.</span>
+        <ul class="clean">
+          <li>Project management (multiple formats, 42 hours)</li>
+          <li>Sports analytics (multiple formats, 42 hours)</li>
+          <li>Production scheduling and control (21 hours)</li>
+          <li>Decision modeling with spreadsheet applications (21 hours)</li>
+        </ul>
+      </div>
+      <div class="card">
+        <span class="tag">Undergraduate · 42 hours each</span>
+        <ul class="clean">
+          <li>Project management</li>
+          <li>Production and operations management</li>
+          <li>Decision modeling with spreadsheet applications</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICE -->
+<section class="block alt" id="service">
+  <div class="wrap">
+    <div class="sec-title">Service</div>
+    <h2>Editorial and professional service</h2>
+    <div class="grid2">
+      <div>
+        <h3 style="font-size:1.2rem">Editorial Positions</h3>
+        <ul class="clean">
+          <li><strong>Editor, INFORMS Analytics Collections</strong>, 2021–2023 — INFORMS' multimedia journal publishing collections of academic research</li>
+          <li><strong>Associate Editor, Operations Research</strong>, from May 1991 — 145 papers processed; five Meritorious Service awards</li>
+          <li><strong>Associate Editor, Management Science</strong>, Nov 1993 – Dec 2008 — 60 submissions handled</li>
+          <li><strong>Editorial Board, Manufacturing &amp; Service Operations Management</strong>, 2002–2006</li>
+          <li><strong>Associate Editor, IIE Transactions</strong>, May 1994 – Dec 2000</li>
+          <li><strong>Associate Editor, Journal of Scheduling</strong>, Jun 2000 – Dec 2004</li>
+        </ul>
+      </div>
+      <div>
+        <h3 style="font-size:1.2rem">Professional Service</h3>
+        <ul class="clean">
+          <li><strong>24th President of INFORMS</strong>, 2018 — led the 12,500-member scientific and professional society; established government advocacy resulting in 250 Capitol Hill briefings</li>
+          <li><strong>Treasurer, INFORMS</strong>, 2011–2014 — financial management producing a $1.8m total surplus</li>
+          <li><strong>Vice President for Membership and Professional Recognition, INFORMS</strong>, 2001–2003</li>
+          <li><strong>President, Manufacturing and Service Operations Management Society</strong>, 1999–2000</li>
+          <li>13 NSF peer review panels; 160 journal papers refereed</li>
+          <li>Organized 21 national conference clusters — 195 sessions, 895 presentations — plus 52 additional sessions with 248 presentations</li>
+        </ul>
+      </div>
+    </div>
+    <div style="height:26px"></div>
+    <div class="card">
+      <h3>University Service</h3>
+      <p>At The Ohio State University: University Senate, Faculty Hearing Committee, and Academic Misconduct Committee (chair). At Fisher College of Business: chair of the Teaching Committee and founder of the Project Management Association.</p>
+    </div>
+  </div>
+</section>
+
+<!-- AWARDS -->
+<section class="block" id="awards">
+  <div class="wrap">
+    <div class="sec-title">Awards &amp; Honors</div>
+    <h2>Recognition and rankings</h2>
+    <div class="grid2">
+      <div class="news">
+        <div class="item"><div class="yr">2021</div><div><strong>Fellow of INFORMS</strong> — an award limited to 2% of the membership.</div></div>
+        <div class="item"><div class="yr">2021</div><div><strong>Ranked 1st in scheduling research</strong> for publications in <em>Operations Research</em>, 1952–2019.</div></div>
+        <div class="item"><div class="yr">2021–23</div><div><strong>Editor, INFORMS Analytics Collections.</strong></div></div>
+        <div class="item"><div class="yr">2018</div><div><strong>President, INFORMS</strong> — President-Elect 2017, Past President 2019.</div></div>
+        <div class="item"><div class="yr">2011–14</div><div><strong>Treasurer, INFORMS.</strong></div></div>
+      </div>
+      <div class="news">
+        <div class="item"><div class="yr">2001–03</div><div><strong>Vice President for Membership and Professional Recognition, INFORMS.</strong></div></div>
+        <div class="item"><div class="yr">2002–</div><div><strong>Fellow, Center for Decision Making with Uncertainty</strong>, Chinese Academy of Sciences, Beijing, China.</div></div>
+        <div class="item"><div class="yr">1999–00</div><div><strong>President, Manufacturing and Service Operations Management Society.</strong></div></div>
+        <div class="item"><div class="yr">1998 &amp; 2005</div><div><strong>Pace Setters' Research Award</strong> — alumni-sponsored honor given annually to one of 120 Fisher College business faculty.</div></div>
+        <div class="item"><div class="yr">1997–02</div><div><strong>Statewide University Representative</strong>, State of Ohio Steel Industry Advisory Council.</div></div>
+        <div class="item"><div class="yr">1972–74</div><div><strong>Open Exhibition in Economics</strong>, Trinity College, University of Cambridge.</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CV -->
+<section class="block alt" id="cv">
+  <div class="wrap">
+    <div class="sec-title">Curriculum Vitae</div>
+    <h2>Documents and citations</h2>
+    <div class="grid3">
+      <div class="card"><h3>Curriculum Vitae</h3><p>Complete academic CV, hosted on the Ohio State faculty site.</p><p><a href="https://u.osu.edu/hall33/curriculum-vitae/" target="_blank" rel="noopener">Open CV page →</a></p></div>
+      <div class="card"><h3>Google Scholar</h3><p>8,300+ citations · h-index 41.</p><p><a href="https://scholar.google.com/citations?user=MmXKztQAAAAJ&hl=en&oi=ao" target="_blank" rel="noopener">View profile →</a></p></div>
+      <div class="card"><h3>Original Faculty Page</h3><p>The source site at The Ohio State University.</p><p><a href="https://u.osu.edu/hall33/" target="_blank" rel="noopener">u.osu.edu/hall33 →</a></p></div>
+    </div>
+  </div>
+</section>
+
+<footer class="site">
+  <div class="wrap">
+    <div>
+      <h4>Nicholas G. Hall</h4>
+      <p style="color:#b9b7b3;font-size:.95rem;margin:0">Berry Family Professor of Operations Management<br>
+      Department of Operations and Business Analytics<br>
+      Fisher College of Business, The Ohio State University</p>
+    </div>
+    <div>
+      <h4>Office</h4>
+      <ul>
+        <li>658 Fisher Hall</li>
+        <li>2100 Neil Avenue</li>
+        <li>Columbus, Ohio 43210-1144</li>
+      </ul>
+    </div>
+    <div>
+      <h4>Contact</h4>
+      <ul>
+        <li><a href="mailto:hall.33@osu.edu">hall.33@osu.edu</a></li>
+        <li>Phone: <a href="tel:614-292-9216">614-292-9216</a></li>
+        <li>Fax: 614-292-1272</li>
+        <li><a href="https://scholar.google.com/citations?user=MmXKztQAAAAJ&hl=en&oi=ao" target="_blank" rel="noopener">Google Scholar</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="wrap"><div class="copy">© 2026 Nicholas G. Hall · The Ohio State University · Content from u.osu.edu/hall33</div></div>
+</footer>
+
+<script>
+document.getElementById('navtoggle').addEventListener('click',function(){
+  document.getElementById('navmenu').classList.toggle('open');
+});
+document.querySelectorAll('#navmenu a').forEach(function(a){
+  a.addEventListener('click',function(){document.getElementById('navmenu').classList.remove('open');});
+});
+var links=[].slice.call(document.querySelectorAll('#navmenu a'));
+var secs=links.map(function(a){return document.querySelector(a.getAttribute('href'));});
+window.addEventListener('scroll',function(){
+  var y=window.scrollY+90,cur=0;
+  secs.forEach(function(s,i){if(s&&s.offsetTop<=y)cur=i;});
+  links.forEach(function(a,i){a.classList.toggle('active',i===cur);});
+});
+</script>
+</body>
+</html>
